@@ -10,7 +10,6 @@ import v1CategoriesRouter from "./api/v1/routes/category.routes.js";
 import v1AuthRouter from "./api/v1/routes/auth.routes.js";
 import cookieParser from "cookie-parser";
 import v1UploadDownloadrouter from "./api/v1/routes/fileRoutes.js";
-import { ENV } from './config/env.config.js';
 
 // Load environment variables
 dotenv.config();
@@ -42,8 +41,6 @@ app.use("/api/v1/files", v1UploadDownloadrouter);
 app.use((req, res, next) => {
   res.status(404).json({ message: "Route not found" });
 });
-
-console.log("db url ", ENV.DB)
 
 // ----------------------------
 // Global Error Handler
