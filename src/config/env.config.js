@@ -16,7 +16,7 @@ export const ENV = {
   REDIS_PORT: process.env.REDIS_PORT,
 
   // PostgreSQL config
-  DB: process.env.PSQL || "",
+  DB: process.env.PSQL,
 
   // CLOUDINARY FOR IMAGES
   ClOUD_API_KEY: process.env.CLOUDINARY_API_KEY,
