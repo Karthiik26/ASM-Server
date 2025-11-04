@@ -17,14 +17,14 @@ pool.on("connect", () => {
 
 // Handle unexpected errors
 pool.on("error", (err) => {
-  console.error("❌ Unexpected PostgreSQL error:", err.message);
+  console.error("Unexpected PostgreSQL error:", err.message);
   process.exit(-1);
 });
 
 // Graceful shutdown on process termination
 process.on("SIGINT", async () => {
   await pool.end();
-  console.log("🛑 PostgreSQL pool has ended");
+  console.log("PostgreSQL pool has ended");
   process.exit(0);
 });
 
